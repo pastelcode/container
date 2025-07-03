@@ -20,6 +20,9 @@ RUN apt update && \
         wget \
         unzip \
         default-jdk && \
+        python3 \
+        python3-pip && \
+    ln -s /usr/bin/python3 /usr/bin/python && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
 # Install Jupiter
