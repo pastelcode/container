@@ -22,8 +22,12 @@ RUN apt update && \
         default-jdk && \
         python3 \
         python3-pip && \
+        nano && \
     ln -s /usr/bin/python3 /usr/bin/python && \
     apt clean && rm -rf /var/lib/apt/lists/*
+
+# Set nano as the default editor for Git
+RUN git config --system core.editor "nano"
 
 # Install Jupiter
 WORKDIR /opt
