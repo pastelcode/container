@@ -8,9 +8,6 @@ RUN apt update && \
     apt upgrade -y && \
     apt install -y \
         libc6 \
-        libc6-i386 \
-        lib32z1 \
-        lib32ncurses6 \
         bison \
         csh \
         libxaw7-dev \
